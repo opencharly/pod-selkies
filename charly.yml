@@ -13,7 +13,7 @@ selkies:
             below asserts a real installed file or a live HTTPS endpoint, so every
             scenario fails if the candy installed nothing.
         require:
-            - '@github.com/opencharly/layer-supervisord:v2026.235.2056'
+            - '@github.com/opencharly/layer-supervisord:v2026.239.1300'
             - '@github.com/opencharly/layer-python:v2026.235.2057'
             - '@github.com/opencharly/pod-pipewire:v2026.235.2057'
         # pixelflux's Wayland backend (pixelflux_wayland.so) is dynamically linked
