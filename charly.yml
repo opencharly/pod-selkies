@@ -1,7 +1,7 @@
 version: 2026.240.1943
 selkies:
     candy:
-        version: 2026.242.2055
+        version: 2026.243.0120
         description: |
             Browser-accessible desktop streaming over HTTPS via pixelflux Wayland capture and a Traefik reverse proxy
             selkies installs a Python streaming server (the launch wrapper, the
@@ -14,8 +14,8 @@ selkies:
             scenario fails if the candy installed nothing.
         require:
             - '@github.com/opencharly/layer-supervisord:v2026.240.0121'
-            - '@github.com/opencharly/layer-python:v2026.239.1613'
-            - '@github.com/opencharly/pod-pipewire:v2026.239.1555'
+            - '@github.com/opencharly/layer-python:v2026.243.0409'
+            - '@github.com/opencharly/pod-pipewire:v2026.243.0508'
         # pixelflux's Wayland backend (pixelflux_wayland.so) is dynamically linked
         # against ffmpeg's libav* + libx264 — without them at runtime the backend fails
         # to load (libx264.so.165: cannot open shared object file), pixelflux never
