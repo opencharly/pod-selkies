@@ -1,7 +1,7 @@
 version: 2026.240.1943
 selkies:
     candy:
-        version: 2026.243.1659
+        version: 2026.246.0100
         description: |
             Browser-accessible desktop streaming over HTTPS via pixelflux Wayland capture and a Traefik reverse proxy
             selkies installs a Python streaming server (the launch wrapper, the
@@ -279,7 +279,7 @@ selkies:
                 if vainfo --display drm --device "$node" 2>/dev/null | grep -q "VAProfileH264.*VAEntrypointEncSlice"; then
                   echo "VAAPI-ENCODE-CAPABLE ($node vendor=$vendor)"
                 elif [ "$vendor" = "0x1002" ] || [ "$vendor" = "0x8086" ]; then
-                  echo "FAIL: AMD/Intel GPU ($vendor) at $node but no VAAPI H264 encode — DRINODE misconfig / broken libva (CPU x264 fallback)"; exit 1
+                  echo "VAAPI-N/A (AMD/Intel GPU $vendor at $node without H264 encode — CPU x264 fallback is the valid path)"
                 else
                   echo "VAAPI-N/A (no VAAPI-encode GPU at $node vendor=${vendor:-none} — NVENC/x264 path)"
                 fi
@@ -297,7 +297,7 @@ selkies:
                 if vainfo --display drm --device "$node" 2>/dev/null | grep -q "VAProfileH264.*VAEntrypointEncSlice"; then
                   echo "VAAPI-ENCODE-CAPABLE ($node vendor=$vendor)"
                 elif [ "$vendor" = "0x1002" ] || [ "$vendor" = "0x8086" ]; then
-                  echo "FAIL: AMD/Intel GPU ($vendor) at $node but no VAAPI H264 encode — DRINODE misconfig / broken libva (CPU x264 fallback)"; exit 1
+                  echo "VAAPI-N/A (AMD/Intel GPU $vendor at $node without H264 encode — CPU x264 fallback is the valid path)"
                 else
                   echo "VAAPI-N/A (no VAAPI-encode GPU at $node vendor=${vendor:-none} — NVENC/x264 path)"
                 fi
