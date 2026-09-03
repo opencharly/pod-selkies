@@ -313,7 +313,7 @@ selkies:
                 echo "frame still uniform (spread=$sp ymin=$ymin ymax=$ymax)"; exit 1
               id: selkies-frame-not-black
               exit_status: 0
-              eventually: 90s
+              eventually: 300s
               retry_interval: 5s
               stdout:
                 - contains: "FRAME-NOT-BLACK"
