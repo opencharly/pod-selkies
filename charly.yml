@@ -1,7 +1,5 @@
-version: 2026.240.1943
 selkies:
     candy:
-        version: 2026.246.0100
         description: |
             Browser-accessible desktop streaming over HTTPS via pixelflux Wayland capture and a Traefik reverse proxy
             selkies installs a Python streaming server (the launch wrapper, the
