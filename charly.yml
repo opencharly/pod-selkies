@@ -11,9 +11,9 @@ selkies:
             below asserts a real installed file or a live HTTPS endpoint, so every
             scenario fails if the candy installed nothing.
         require:
-            - '@github.com/opencharly/layer-supervisord:v2026.240.0121'
-            - '@github.com/opencharly/layer-python:v2026.243.0409'
-            - '@github.com/opencharly/pod-pipewire:v2026.243.0508'
+            - '@github.com/opencharly/layer-supervisord:v2026.271.1817'
+            - '@github.com/opencharly/layer-python:v2026.273.1820'
+            - '@github.com/opencharly/pod-pipewire:v2026.273.1856'
         # pixelflux's Wayland backend (pixelflux_wayland.so) is dynamically linked
         # against ffmpeg's libav* + libx264 — without them at runtime the backend fails
         # to load (libx264.so.165: cannot open shared object file), pixelflux never
@@ -25,7 +25,7 @@ selkies:
         # x264 → libx264.so.165; fedora: negativo17), supplying every lib pixelflux
         # links. R9: declare the runtime dep.
         candy:
-            - '@github.com/opencharly/layer-ffmpeg:v2026.239.1614'
+            - '@github.com/opencharly/layer-ffmpeg:v2026.272.0056'
         env:
             LANG: "C.UTF-8"
             PIXELFLUX_WAYLAND: "true"
